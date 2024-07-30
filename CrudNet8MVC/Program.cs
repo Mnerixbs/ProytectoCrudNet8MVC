@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using CrudNet8MVC.Datos;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,6 +10,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationDbContext>(opciones => 
 opciones.UseSqlServer(builder.Configuration.GetConnectionString("ConexionSql")));
 
+=======
+var builder = WebApplication.CreateBuilder(args);
+
+>>>>>>> dbce2f87d8fe0341d40dd48142a024f637aae2e6
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 

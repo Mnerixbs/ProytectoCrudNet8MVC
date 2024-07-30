@@ -1,13 +1,19 @@
+<<<<<<< HEAD
 using CrudNet8MVC.Datos;
 using CrudNet8MVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+=======
+using CrudNet8MVC.Models;
+using Microsoft.AspNetCore.Mvc;
+>>>>>>> dbce2f87d8fe0341d40dd48142a024f637aae2e6
 using System.Diagnostics;
 
 namespace CrudNet8MVC.Controllers
 {
     public class HomeController : Controller
     {
+<<<<<<< HEAD
         private readonly ApplicationDbContext _contexto;
 
 
@@ -24,10 +30,21 @@ namespace CrudNet8MVC.Controllers
 
         [HttpGet]
         public IActionResult Crear()
+=======
+        private readonly ILogger<HomeController> _logger;
+
+        public HomeController(ILogger<HomeController> logger)
+        {
+            _logger = logger;
+        }
+
+        public IActionResult Index()
+>>>>>>> dbce2f87d8fe0341d40dd48142a024f637aae2e6
         {
             return View();
         }
 
+<<<<<<< HEAD
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Crear(Contacto contacto)
@@ -41,6 +58,8 @@ namespace CrudNet8MVC.Controllers
             }
             return View();
         }
+=======
+>>>>>>> dbce2f87d8fe0341d40dd48142a024f637aae2e6
         public IActionResult Privacy()
         {
             return View();
